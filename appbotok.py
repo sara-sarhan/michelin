@@ -146,7 +146,7 @@ def textbox(text, box="other", value=''):
 
             if Ct.risposta[3] in images_files[0]:
                 for i in images_files:
-                    pil_image = Image.open(os.path.join(os.getcwd(), 'data/foto', i))
+                    pil_image = Image.open(os.path.join(os.getcwd(), 'data', i))
 
                     textbox1.append(
                         html.Img(src=pil_image,
