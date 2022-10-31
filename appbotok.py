@@ -119,7 +119,7 @@ def textbox(text, box="other", value=''):
             from PIL import Image  # new import
             import base64
 
-            images_files = [f for f in os.listdir(PATH.joinpath("data/foto")) if f.endswith('.jpg')]
+            images_files = [f for f in os.listdir(PATH.joinpath("data")) if f.endswith('.jpg')]
             text = Ct.visualizza[-1]
 
             norma = text[text.find('NORMA'):text.find('AZIONI')].strip().capitalize()
@@ -259,12 +259,12 @@ def update_display(chat_history):
         "margin-bottom": "2px",
     }
 
-    time.sleep(2)
+
     value = Ct.user
 
     if value is not None:
         print(f"Risposta utente ---> {value}")
-        time.sleep(1)
+
         Ct.risposta.append(value)
 
     print(f"Riempio la variabile del controller? ---> {Ct.risposta}")
